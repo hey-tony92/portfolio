@@ -1,3 +1,86 @@
 html {
     scroll-behavior: smooth;
 }
+
+h1 {
+    font-size: 70px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+}
+
+h3 {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+#intro-header {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(61, 61, 59);
+    height: 100vh;  
+    overflow: hidden;
+
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: antiquewhite;
+    overflow-y: auto;
+    border-radius: 1%;
+
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px 20px;
+    justify-content: center;
+}
+
+.project-item {
+    background-color: lightskyblue;
+    border: 3px solid black;
+    width: 100%;
+    max-width: 900%;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}   
