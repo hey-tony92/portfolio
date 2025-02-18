@@ -2,27 +2,48 @@ html {
     scroll-behavior: smooth;
 }
 
-h1 {
-    font-size: 70px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}
-
-h2 {
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   
+.intro-text {
+        font-size: 120px;
+        font-family: cheddar-gothic-rough, sans-serif;
+        color:rgb(213, 208, 208);
+        letter-spacing: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: left;
 }
 
 h3 {
-    text-align: center;
+    font-size: 120px;
+    font-family: cheddar-gothic-rough, sans-serif;
+    color: rgb(213, 208, 208);
+    letter-spacing: 5px;
+}
+/* h1 {
+    font-size: 120px;
+    font-family: cheddar-gothic-rough, sans-serif;
+    color:rgb(213, 208, 208);
+    letter-spacing: 5px;
+} */
+
+h2 {
+    text-align: left;
+    font-family: cheddar-gothic-rough, sans-serif;
+    color:rgb(213, 208, 208);
+    letter-spacing: 5px;
 }
 
+.nav-hamburger {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+}
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     gap: 20px;
     font-size: 20px;
 }
@@ -40,7 +61,7 @@ nav a {
 }
 
 body {
-    background-color: rgb(61, 61, 59);
+    background-color: rgb(20, 20, 19);
     height: 100vh;  
     overflow: hidden;
 
@@ -52,9 +73,10 @@ body {
     height: 100vh;
     margin: 0 auto;
     padding: 0 20px;
-    background-color: antiquewhite;
+    background-color: rgb(20, 20, 19);
     overflow-y: auto;
     border-radius: 1%;
+    border: 2px solid rgb(213, 208, 208);
 
 }
 
