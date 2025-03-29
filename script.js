@@ -6,4 +6,3 @@ document.addEventListener("DOMContentLoaded", function() {
     navLinks.classList.toggle("active");
    });
 });
-
