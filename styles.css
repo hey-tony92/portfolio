@@ -220,6 +220,73 @@ body {
     object-fit: cover;
 }
 
+#contact-form-greeting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 80px;
+    font-family: cheddar-gothic-rough, sans-serif;
+    color: rgb(213, 208, 208);
+    margin-top: 50px;
+}
+
+#form-container {
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    padding: 25px;
+    background-color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+
+}
+
+.file {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: loos-compressed, sans-serif;
+    color: rgb(213, 208, 208);
+    font-size: 24px;
+}
+
+input, textarea, button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: none;
+    appearance: none;
+    border: none;
+}
+
+input, textarea {
+    transition: all 0.3s ease;
+}
+
+input:hover, textarea:hover {
+    background-color: rgb(37, 37, 37); 
+    border-style: none;
+}
+
+/* When user clicks into an input */
+input:focus, textarea:focus {
+    box-shadow: 0 0 8px rgb(213, 208, 208);
+    outline: none;
+}
+
+
 footer {
     display: flex;
     justify-content: center;
