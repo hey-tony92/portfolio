@@ -140,20 +140,7 @@ p {
     color: white;
 }
 
-#intro-header .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 50 20;
-    min-height: 100vh;
-    box-sizing: border-box;
-    text-align: center;
-    align-items: center;
-    border: none;
-}
-
 #intro-header {
-    position: fixed;
     z-index: 1;
     height: 100vh;
     display: flex;
@@ -174,25 +161,26 @@ p {
     border-radius: 5%;
 }
 
-#homepage, html {
+#homepage {
+    position: relative;
+    z-index: 1;
     background-color: rgb(20, 20, 19);
     min-height: 100vh;  
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     margin-bottom: 50px;
-    
-
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 1200px;
     min-height: 100vh;
     margin: 0 auto;
     padding: 30px;
     background-color: rgb(20, 20, 19);
-    border-radius: 1%;
     border: 2px solid rgb(213, 208, 208);
 }
 
@@ -201,7 +189,6 @@ p {
     grid-template-columns: 1fr;
     max-width: 1200px;
     gap: 40px;
-    /* padding: 40px 20px; */
     justify-content: center;
     margin: 0 auto;
 }
@@ -210,13 +197,13 @@ p {
     position: relative;
     z-index: 2;
     padding: 4rem, 2rem;
-    background: white;
-    margin-top: 100vh;
+    background: rgba(0, 0, 0, 0.1);
+    margin-top: 50vh;
 }
 
+
+
 .project-item {
-    /* background-color: lightskyblue; */
-    /* border: 3px solid black; */
     width: 100%;
     max-width: 1300px;
     height: auto;
