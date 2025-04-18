@@ -1,24 +1,32 @@
 html {
     scroll-behavior: smooth;
+    overflow: scroll; 
 }
 
 .intro-text {
         font-size: 120px;
         font-family: cheddar-gothic-rough, sans-serif;
         color:rgb(213, 208, 208);
-        letter-spacing: 5px;
+        letter-spacing: 3px;
         display: flex;
         flex-direction: column;
         align-items: left;
         justify-content: left;
         text-align: left;
+        
+}
+
+#intro-header {
+    position: sticky;
+    top: -460px;
 }
 
 h3 {
     font-size: 120px;
     font-family: cheddar-gothic-rough, sans-serif;
     color: rgb(213, 208, 208);
-    letter-spacing: 5px;
+    letter-spacing: 3px;
+    margin-top: 0;
 }
 
 #about-me-heading {
@@ -29,11 +37,12 @@ h3 {
 }
 
 h2 {
-    font-size: 2.0rem;
+    font-size: 60px;
     text-align: center;
     font-family: cheddar-gothic-rough, sans-serif;
     color:rgb(213, 208, 208);
     letter-spacing: 3px;
+    margin-top: 20px;
 }
 
 p {
@@ -162,13 +171,11 @@ p {
 }
 
 #homepage {
-    position: relative;
     z-index: 1;
     background-color: rgb(20, 20, 19);
     min-height: 100vh;  
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     margin-bottom: 50px;
 }
 
@@ -194,11 +201,9 @@ p {
 }
 
 #projects {
-    position: relative;
     z-index: 2;
-    padding: 4rem, 2rem;
     background: rgba(0, 0, 0, 0.1);
-    margin-top: 50vh;
+    margin-top: 300px;
 }
 
 
