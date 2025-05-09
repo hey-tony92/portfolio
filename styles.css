@@ -1,6 +1,6 @@
 html {
     scroll-behavior: smooth;
-    overflow: scroll; 
+    overflow: auto;
 }
 
 .intro-text {
@@ -10,32 +10,28 @@ html {
         letter-spacing: 3px;
         display: flex;
         flex-direction: column;
-        align-items: left;
-        justify-content: left;
+        align-items: flex-start;
+        justify-content: flex-start;
         text-align: left;
         background: linear-gradient(
-            to bottom,
+            /* to bottom,
             rgba(0, 0, 0, 0) 0%, /* Fully transparent at the top */
-            rgba(0, 0, 0, 1) 100% /* Fully opaque at the bottom */
-        ); /* Creates a fade effect using a gradient */
-        -webkit-mask-image: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 1) 0%, /* Fully visible at the top */
-            rgba(0, 0, 0, 0) 100% /* Fully transparent at the bottom */
-        ); /* Ensures the fade effect works across browsers */
+            /* rgba(37, 37, 37, 1) 100% Fully opaque at the bottom */ 
+        );
+
         mask-image: linear-gradient(
             to bottom,
             rgba(0, 0, 0, 1) 0%, /* Fully visible at the top */
             rgba(0, 0, 0, 0) 100% /* Fully transparent at the bottom */
         ); /* Applies the fade effect to the text */
+        -webkit-mask-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 1) 0%, /* Fully visible at the top */
+            rgba(0, 0, 0, 0) 100% /* Fully transparent at the bottom */
+        ); /* Applies the fade effect to the text for WebKit browsers */
         transition: opacity 0.3s ease-in-out; /* Smoothly transitions opacity changes */
     
         
-}
-
-#intro-header {
-    position: sticky;
-    top: -460px;
 }
 
 h3 {
@@ -74,6 +70,7 @@ p {
     margin: 0 auto;
     max-width: 700px;
     padding: 0 10px;
+    margin-bottom: 10%;
 }
 
 .hamburger {
@@ -83,7 +80,7 @@ p {
     cursor: pointer;
     color: white;
     z-index: 1000;
-    transition: color 0.3s ease-in-out, color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
 }
 
 .nav-menu.active + .hamburger,
@@ -97,7 +94,7 @@ p {
     top: 0;
     left: 0;
     width: 100%;
-    height: 5.5%;
+    height: auto;
     background-color:rgb(23, 23, 23);
     padding: 10px 20px;
     display: flex;
@@ -107,9 +104,34 @@ p {
    
 }
 
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        background-color: rgb(23, 23, 23);
+        width: 100%;
+    }
+
+    .nav-links ul li {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+
 .nav-links.active {
-    left: 0;
-    display: flex;
+    transform: translateX(250px);
 }
 
 .nav-links ul {
@@ -121,6 +143,7 @@ p {
 
 .nav-links {
     transition: 0.3s ease-in-out;
+    transform: translateX(-100%);
     position: absolute;
     top: 60px;
     left: -250px;
@@ -159,22 +182,39 @@ p {
     display: flex;
     gap: 15px;
     z-index: 1000;
+    font-size: 30px;
 }
 
-.contact-icons i {
+
+.footer-contact-icons {
+    display: flex;
+    gap: 15px;
     font-size: 30px;
-    color: white;
+ 
 }
+
+.contact-icons a {
+    text-decoration: none;
+    color: rgb(213, 208, 208);
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-contact-icons a {
+    text-decoration: none;
+    color: rgb(213, 208, 208);
+    transition: color 0.3s ease-in-out;
+}
+
 
 #intro-header {
     z-index: 1;
     height: 100vh;
     display: flex;
     flex-direction: column;
-}
+    position: sticky;
+    top: -460px;
+    margin: 0;
 
-p {
-    margin-bottom: 10%;
 }
 
 #anthony-pic img {
@@ -188,11 +228,9 @@ p {
 }
 
 #homepage {
-    z-index: 1;
     background-color: rgb(20, 20, 19);
+    z-index: 1;
     min-height: 100vh;  
-    margin: 0;
-    padding: 0;
     margin-bottom: 50px;
 }
 
@@ -206,46 +244,114 @@ p {
     padding: 30px;
     background-color: rgb(20, 20, 19);
     border: 2px solid rgb(213, 208, 208);
+    align-items: center;
+}
+
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;  
+    background-color: rgb(20, 20, 19);
+    border: 2px solid rgb(213, 208, 208);
+}
+
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgb(20, 20, 19);
+    /* border: 2px solid rgb(213, 208, 208) */
 }
 
 .project-container {
     display: grid;
     grid-template-columns: 1fr;
     max-width: 1200px;
-    gap: 40px;
-    justify-content: center;
+    gap: 60px;
+    justify-items: center;
+    align-items: center;
     margin: 0 auto;
 }
 
 #projects {
     z-index: 2;
-    background: rgba(0, 0, 0, 0.1);
     margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
-
 
 .project-item {
-    width: 90%;
+    width: 100%;
     max-width: 1300px;
-    height: auto;
+    aspect-ratio: 16/9;
+    /* height: 80vh; */
     margin: 0 auto;
-    border-radius: 5px;
+    border-radius: 10px;
     display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
+  }
+    
+
+
+/* .project-item:hover {
+   
+} */
+
+#microsite img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: top;
+    overflow: scroll;
+
+
 }
 
-.project-item:hover {
-    overflow:auto;
-}
+    
+
 
 .project-item img {
     width: 100%;
-    height: auto;
+    border-radius: 10px;
+    height: 100%;
     object-fit: cover;
+   
 }
+
+@media (max-width: 768px) {
+    .project-item {
+        aspect-ratio: 4/3
+    }
+}
+
+@media(max-width: 768px) {
+    .intro-text {
+        font-size: clamp(4.0rem, 4vw,4rem);
+        padding: 30px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+@media(max-width: 768px) {
+    h3 {
+        font-size: clamp(2.0rem, 4vw, 4rem);
+        gap: 10px;
+        padding: 20px;
+        text-align: left;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 
 #contact-form-greeting {
     display: flex;
@@ -265,8 +371,8 @@ p {
     border-radius: 8px;
     width: 100%;
     max-width: 600px;
-    margin: auto;
-    padding: 20px 20px;
+    margin: 0 auto;
+    padding: 20px;
     background-color: #333;
 }
 
@@ -277,22 +383,16 @@ form {
     flex-direction: column;
     align-items: center;
     gap: 12px;
+    margin: 50px auto;
 
 }
-
-/* .file {
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    gap: 10px;
-} */
 
 label {
     display: block;
     margin-bottom: 8px;
     font-family: "Roboto Mono", monospace;
     color: rgb(213, 208, 208);
-    font-size: 25px;
+    font-size: 30px;
 
 }
 
@@ -306,11 +406,12 @@ input, textarea, button {
 }
 
 input, textarea {
+    background: rgb(37, 37, 37);
     transition: all 0.3s ease;
     color: rgb(213, 208, 208);
     font-family: "Roboto Mono", monospace;
-    font-size: 16px;
-    font-weight: 200;
+    font-size: 17px;
+    font-weight: 400;
     /* height: 30px; Sets a reasonable height */
     padding: 10px; /* Adds spacing inside the input */
     border-radius: 12px;
@@ -320,6 +421,7 @@ input, textarea {
 
 input:hover, textarea:hover {
     background-color: rgb(37, 37, 37); 
+    box-shadow: 0 0 5px rgb(213, 208, 208);
     border-style: none;
 }
 
@@ -327,6 +429,7 @@ input:hover, textarea:hover {
 input:focus, textarea:focus {
     box-shadow: 0 0 5px rgb(213, 208, 208);
     outline: none;
+
 }
 
 textarea {
@@ -355,12 +458,9 @@ button:hover {
     transition: all 0.3s ease;
 
 }
-
-
-
 footer {
     display: flex;
     justify-content: center;
-    margin: 0;
-    padding: 0;
-}   
+    align-items: center;
+    margin-top: 30px;
+}
