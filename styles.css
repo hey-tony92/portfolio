@@ -578,8 +578,50 @@ button:hover {
     flex-direction: column;
 }
 
+.button-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
 
+.button-container button {
+    padding: 12px 24px;
+    background: transparent;
+    border: 2px solid rgb(213, 208, 208);
+    color: rgb(213, 208, 208);
+    font-family: "Roboto Mono", monospace;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+}
 
+.button-container button:hover {
+    background: rgb(213, 208, 208);
+    color: rgb(23, 23, 23);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    .button-container {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .button-container button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .success-message h2 {
+        font-size: clamp(2.5rem, 5vw, 1.5rem);
+        letter-spacing: 1px;
+    }
+}
 
 
 footer {

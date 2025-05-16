@@ -31,6 +31,11 @@ document.querySelector('form').addEventListener('submit', async function(e) {
                 <div class="success-message">
                     <h2>Message Sent!</h2>
                     <p>Thank you! I'll get back to you shortly.</p>
+                    <div class="button-container">
+                    <button onclick="window.location.href='index.html'" class="home-button">
+                    Back to Home
+                    </button>
+                    </div>
                 </div>`;
         }
     } catch (error) {
