@@ -43,3 +43,7 @@ document.querySelector('form').addEventListener('submit', async function(e) {
         alert('Whoops! There was a problem submitting your message. Try again!');
     }
 });
+
+//modal functionality
+
+
