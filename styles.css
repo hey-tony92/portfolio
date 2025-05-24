@@ -378,7 +378,6 @@ p {
     border-radius: 10px;
     display: flex;
     overflow: hidden;
-    cursor: pointer;
     transition: transform 0.2s;
   }
     
@@ -625,57 +624,43 @@ button:hover {
     }
 }
 
-/* Modal Styles */
-
 .project-item:hover {
     transform: scale(1.02);
 }
 
-.modal-container {
+/* Lightbox Styles */
+
+.lightbox {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0,0,0,0.75);
-    backdrop-filter: blur(5px);
-    align-items: center;
-    justify-content: center;
-   
-}
-
-.modal {
-    top: 50%;
-    left: 50%;
-    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
-    width: 600px;
-    transform: translate(-50%, -50%);
-    background: rgb(37, 37, 37);
-    padding: 30px;
-    border-radius: 8px;
-    max-width: 100%;
-    overflow-y: auto;;
-    max-height: 90vh;
-    color: rgb(213, 208, 208);
+    align-items: center;
+    z-index: 1000;
 }
 
-.close-button {
+.lightbox.hidden {
+    display: none;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox-close {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    border: none;
-    background: none;
-    font-size: 24px;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
     cursor: pointer;
 }
 
-.modal-container.active {
-    display: block;
-}
 
 footer {
     display: flex;
