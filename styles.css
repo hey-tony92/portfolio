@@ -636,7 +636,7 @@ button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.85);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -649,16 +649,44 @@ button:hover {
 
 .lightbox-img {
     max-width: 90%;
-    max-height: 90%;
+    max-height: 85%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.lightbox-img:hover {
+  transform: scale(1.02);
 }
 
 .lightbox-close {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 2rem;
+    top: 30px;
+    right: 40px;
+    font-size: 2.5rem;
     color: white;
     cursor: pointer;
+    z-index: 1001;
+    transition: color 0.2s ease;
+}
+
+.lightbox-close:hover {
+  color: #ff6b6b;
+}
+
+/* .project-modal.hidden {
+  display: none;
+} */
+
+.modal-content {
+  background: #222;
+  color: #fff;
+  padding: 2rem;
+  max-width: 800px;
+  text-align: center;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
 }
 
 

@@ -64,3 +64,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const projectImages = document.querySelectorAll('.project-item img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.querySelector('.lightbox-img');
+    const closeBtn = document.querySelector('.lightbox-close');
+
+    projectImages.forEach((image) => {
+        image.addEventListener('click', () => {
+            lightbox.classList.remove('hidden');
+            lightboxImg.src = image.src;
+            lightboxImg.alt = image.alt;
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        lightbox.classList.add('hidden');
+    });
+
+    // Close if you click outside the image
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.classList.add('hidden');
+        }
+    });
+});
+
+
