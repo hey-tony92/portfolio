@@ -71,6 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeBtn = document.querySelector('.lightbox-close');
 
     projectImages.forEach((image) => {
+
+
         image.addEventListener('click', () => {
             lightbox.classList.remove('hidden');
             lightboxImg.src = image.src;

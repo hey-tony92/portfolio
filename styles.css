@@ -655,9 +655,9 @@ button:hover {
     transition: transform 0.3s ease;
 }
 
-.lightbox-img:hover {
+/* .lightbox-img:hover {
   transform: scale(1.02);
-}
+} */
 
 .lightbox-close {
     position: absolute;
@@ -672,6 +672,13 @@ button:hover {
 
 .lightbox-close:hover {
   color: #ff6b6b;
+}
+
+.project-item h1 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+
+
 }
 
 /* .project-modal.hidden {
