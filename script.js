@@ -64,21 +64,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-document.addEventListener("DOMContentLoaded", () => {
+// document.addEventListener("DOMContentLoaded", () => {
     const projectImages = document.querySelectorAll('.project-item img');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.querySelector('.lightbox-img');
     const closeBtn = document.querySelector('.lightbox-close');
+    const lightboxTitle = document.getElementById("lightboxTitle");
+    const lightboxDescription = document.getElementById("lightboxDescription");
 
     projectImages.forEach((image) => {
 
 
-        image.addEventListener('click', () => {
+        image.addEventListener('click', function() {
             lightbox.classList.remove('hidden');
             lightboxImg.src = image.src;
             lightboxImg.alt = image.alt;
+            lightboxTitle.textContent = image.dataset.title || '';
+            lightboxDescription.textContent = image.dataset.description || '';
+
+        
+      
+
+
+
+           
+            
         });
-    });
+    // });
 
     closeBtn.addEventListener('click', () => {
         lightbox.classList.add('hidden');

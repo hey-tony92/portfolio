@@ -93,7 +93,7 @@ p {
     margin: 0 auto;
     max-width: 700px;
     padding: 0 10px;
-    margin-bottom: 10%;
+
 }
 
 .hamburger {
@@ -635,11 +635,12 @@ button:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.85);
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     z-index: 1000;
 }
 
@@ -648,12 +649,16 @@ button:hover {
 }
 
 .lightbox-img {
+    display: flex;
+    top: 50%;
+    left: 50%;
     max-width: 90%;
-    max-height: 85%;
+    max-height: 80vh;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
     border-radius: 8px;
     transition: transform 0.3s ease;
 }
+
 
 /* .lightbox-img:hover {
   transform: scale(1.02);
@@ -674,18 +679,30 @@ button:hover {
   color: #ff6b6b;
 }
 
-.project-item h1 {
-    font-size: 1.5rem;
-    margin: 10px 0;
-
-
+.lightbox-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 90%;
+  max-height: 90%;
 }
 
-/* .project-modal.hidden {
-  display: none;
+#lightbox .lightbox-content h3 {
+ color: white;
+ font-size: 2rem;
+ text-align: center;
+}
+
+/* #lightbox-description {
+  color: #ccc;
+  font-size: 1rem;
+  max-width: 600px;
 } */
 
-.modal-content {
+/* .modal-content {
   background: #222;
   color: #fff;
   padding: 2rem;
@@ -694,7 +711,7 @@ button:hover {
   border-radius: 8px;
   position: relative;
   display: flex;
-}
+} */
 
 
 footer {
