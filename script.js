@@ -64,13 +64,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-// document.addEventListener("DOMContentLoaded", () => {
+
     const projectImages = document.querySelectorAll('.project-item img');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.querySelector('.lightbox-img');
     const closeBtn = document.querySelector('.lightbox-close');
     const lightboxTitle = document.getElementById("lightboxTitle");
     const lightboxDescription = document.getElementById("lightboxDescription");
+    const lightboxExtraImg = document.querySelector('.lightbox-extra-img');
 
     projectImages.forEach((image) => {
 
@@ -82,15 +83,17 @@ document.addEventListener("DOMContentLoaded", () => {
             lightboxTitle.textContent = image.dataset.title || '';
             lightboxDescription.textContent = image.dataset.description || '';
 
+             if (image.dataset.extra) {
+            lightboxExtraImg.src = image.dataset.extra;
+            lightboxExtraImg.style.display = 'block';
+        } else {
+            lightboxExtraImg.style.display = 'none';
+        }
+    });
+
         
-      
-
-
-
-           
-            
-        });
-    // });
+     
+ 
 
     closeBtn.addEventListener('click', () => {
         lightbox.classList.add('hidden');
