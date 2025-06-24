@@ -3,6 +3,15 @@ html {
     overflow: auto;
 }
 
+.logo {
+    width: auto;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.8;
+}
+
 .intro-text {
         /* font-size: 120px; */
         font-size: clamp(2rem, 8vw, 120px);
