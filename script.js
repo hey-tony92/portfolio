@@ -55,23 +55,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("DOMContentLoaded", () => {
     const projectImages = document.querySelectorAll('.project-item img');
-
-    projectImages.forEach((image) => {
-        image.addEventListener('click', () => {
-            console.log(`Image clicked: ${image.src}`);
-        });
-    })
-
-});
-
-
-    const projectImages = document.querySelectorAll('.project-item img');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.querySelector('.lightbox-img');
     const closeBtn = document.querySelector('.lightbox-close');
     const lightboxTitle = document.getElementById("lightboxTitle");
     const lightboxDescription = document.getElementById("lightboxDescription");
     const lightboxExtraImg = document.querySelector('.lightbox-extra-img');
+    const lightboxExtraImg2 = document.querySelector('.lightbox-extra-img-2');
 
     projectImages.forEach((image) => {
 
@@ -80,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
             lightbox.classList.remove('hidden');
             lightboxImg.src = image.src;
             lightboxImg.alt = image.alt;
+            lightboxExtraImg2.src = image.dataset.extra2 || '';
             lightboxTitle.textContent = image.dataset.title || '';
             lightboxDescription.textContent = image.dataset.description || '';
 
@@ -88,6 +79,15 @@ document.addEventListener("DOMContentLoaded", () => {
             lightboxExtraImg.style.display = 'block';
         } else {
             lightboxExtraImg.style.display = 'none';
+        }
+
+        console.log("Extra 2 image set to:", image.dataset.extra2);
+        if(image.dataset.extra2) {
+            lightboxExtraImg2.src = image.dataset.extra2;
+            lightboxExtraImg2.style.display = 'block';
+        } else {
+            lightboxExtraImg2.style.display = 'none';
+            lightboxExtraImg2.src = '';
         }
     });
 
@@ -106,5 +106,69 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+
+
+
+    // projectImages.forEach((image) => {
+    //     image.addEventListener('click', () => {
+    //         console.log(`Image clicked: ${image.src}`);
+    //     });
+    // })
+
+});
+
+
+//     const projectImages = document.querySelectorAll('.project-item img');
+//     const lightbox = document.getElementById('lightbox');
+//     const lightboxImg = document.querySelector('.lightbox-img');
+//     const closeBtn = document.querySelector('.lightbox-close');
+//     const lightboxTitle = document.getElementById("lightboxTitle");
+//     const lightboxDescription = document.getElementById("lightboxDescription");
+//     const lightboxExtraImg = document.querySelector('.lightbox-extra-img');
+//     const lightboxExtraImg2 = document.querySelector('.lightbox-extra-img-2');
+
+//     projectImages.forEach((image) => {
+
+
+//         image.addEventListener('click', function() {
+//             lightbox.classList.remove('hidden');
+//             lightboxImg.src = image.src;
+//             lightboxImg.alt = image.alt;
+//             lightboxExtraImg2.src = image.dataset.extra2 || '';
+//             lightboxTitle.textContent = image.dataset.title || '';
+//             lightboxDescription.textContent = image.dataset.description || '';
+
+//              if (image.dataset.extra) {
+//             lightboxExtraImg.src = image.dataset.extra;
+//             lightboxExtraImg.style.display = 'block';
+//         } else {
+//             lightboxExtraImg.style.display = 'none';
+//         }
+
+//         if(image.dataset.extra2) {
+//             lightboxExtraImg2.src = image.dataset.extra2;
+//             lightboxExtraImg2.style.display = 'block';
+//         } else {
+//             lightboxExtraImg2.style.display = 'none';
+//             lightboxExtraImg2.src = '';
+//         }
+//     });
+
+        
+     
+ 
+
+//     closeBtn.addEventListener('click', () => {
+//         lightbox.classList.add('hidden');
+//     });
+
+//     // Close if you click outside the image
+//     lightbox.addEventListener('click', (e) => {
+//         if (e.target === lightbox) {
+//             lightbox.classList.add('hidden');
+//         }
+//     });
+// });
 
 
