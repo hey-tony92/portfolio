@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const lightboxDescription = document.getElementById("lightboxDescription");
     const lightboxExtraImg = document.querySelector('.lightbox-extra-img');
     const lightboxExtraImg2 = document.querySelector('.lightbox-extra-img-2');
+    const lightboxExtraImg3 = document.querySelector('.lightbox-extra-img-3');
 
     projectImages.forEach((image) => {
 
@@ -71,6 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
             lightboxImg.src = image.src;
             lightboxImg.alt = image.alt;
             lightboxExtraImg2.src = image.dataset.extra2 || '';
+            lightboxExtraImg3.src = image.dataset.extra3 || '';
+
             lightboxTitle.textContent = image.dataset.title || '';
             lightboxDescription.textContent = image.dataset.description || '';
 
